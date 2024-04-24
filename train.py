@@ -331,6 +331,17 @@ def train(hyp, opt, device, callbacks):
         f"Logging results to {colorstr('bold', save_dir)}\n"
         f'Starting training for {epochs} epochs...'
     )
+
+
+
+
+
+
+
+
+
+
+
     for epoch in range(start_epoch, epochs):  # epoch ------------------------------------------------------------------
         callbacks.run("on_train_epoch_start")
         model.train()
@@ -479,6 +490,21 @@ def train(hyp, opt, device, callbacks):
 
         # end epoch ----------------------------------------------------------------------------------------------------
     # end training -----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     if RANK in {-1, 0}:
         LOGGER.info(f"\n{epoch - start_epoch + 1} epochs completed in {(time.time() - t0) / 3600:.3f} hours.")
         for f in last, best:
